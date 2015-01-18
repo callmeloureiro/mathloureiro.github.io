@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Decifrando o WooCommerce: Parte 01 | Matheus Loureiro</title>
+  <meta name="description" content="Um entusiasta da web!" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" />
+  <meta name="generator" content="Matheus Loureiro">
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
+  
+  
+  <meta name="description" content="Olá senhoras e senhores, tudo certo? Bom, espero que estejam muito bem, no meu caso estou indo né… Passei um tempo sem postar por falta de tempo mesmo, mas o importante é que estou de volta!!!
+Antes d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Decifrando o WooCommerce: Parte 01">
+<meta property="og:url" content="http://yoursite.com/decifrando-o-woocommerce-parte-01/">
+<meta property="og:site_name" content="Matheus Loureiro">
+<meta property="og:description" content="Olá senhoras e senhores, tudo certo? Bom, espero que estejam muito bem, no meu caso estou indo né… Passei um tempo sem postar por falta de tempo mesmo, mas o importante é que estou de volta!!!
+Antes d">
+<meta property="og:image" content="/decifrando-o-woocommerce-parte-01/woocommerce-content-single.png">
+<meta property="og:image" content="/decifrando-o-woocommerce-parte-01/hook.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Decifrando o WooCommerce: Parte 01">
+<meta name="twitter:description" content="Olá senhoras e senhores, tudo certo? Bom, espero que estejam muito bem, no meu caso estou indo né… Passei um tempo sem postar por falta de tempo mesmo, mas o importante é que estou de volta!!!
+Antes d">
+
+  
+    <link rel="icon" href="http://www.matheusloureiro.com.br/favicon.png" />
+    <link rel="shortcut icon" href="http://www.matheusloureiro.com.br/favicon.png" />
+  
+  
+</head>
+
+
+<body class="post-template">
+
+  <header class="site-head"  style="background-image: url(//blog.ghost.org/content/images/2013/Nov/cover.png)" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="//blog.ghost.org/content/images/2013/Nov/bloglogo_1-1.png" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">Matheus Loureiro</h1>
+            <h2 class="blog-description">Um entusiasta da web!</h2>
+            <div class="social">
+            	<a href="//github.com/mathloureiro" title="GitHub do Loureiro" target="_blank"><i class="fa fa-github"></i></a>
+            	<a href="skype:loureirao?call" title="Skpe do Loureiro"><i class="fa fa-skype"></i></a>
+            	<a href="//fb.com/mathloureiro" title="Facebook do Loureiro" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            	<a href="//br.linkedin.com/in/mathloureiro/" title="Linkedin do Loureiro" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+  
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2015-01-18T02:59:44.000Z" itemprop="datePublished">
+          17 jan 2015
+      </time>
+    
+</span>
+    <h1 class="post-title">Decifrando o WooCommerce: Parte 01</h1>
+    <section class="post-content">
+      <p>Olá senhoras e senhores, tudo certo? Bom, espero que estejam muito bem, no meu caso estou indo né… Passei um tempo sem postar por falta de tempo mesmo, mas o importante é que estou de volta!!!</p>
+<p>Antes de começarmos, gostaria de agradecer pelos feedback que estou tendo a respeito do blog e pela “Saga WooCommerce”, OBRIGADO!!! Gostaria de <strong>ressaltar</strong> que o feedback e opinão a respeito disso é importantíssimo, pois é com a opinião de vocês que iremos melhorar cada vez mais, pois este blog não é apenas meu, é de todos nós!!! </p>
+<p>Se você ainda não opinou, possui uma dúvida ou quer apenas falar comigo, não se exite em me contactar nas redes sociais e/ou no próprio comentário aqui do blog, irei responde-los com o maior prazer!</p>
+<p>Enfim, chega de blablabla e vamos lá!</p>
+<blockquote>
+<p><strong>LET’S GO GUYS!</strong></p>
+</blockquote>
+<p>Na postagem anterior, <a href="http://www.matheusloureiro.com.br/woocommerce-o-que-ha-por-tras-dele/" target="_blank" rel="external">O que há por trás do WooCommerce</a> aprendemos como é a estrutura do WooCommerce (sim, se escreve desse jeito ‘-‘ (sim, eu não estava escrevendo assim (sim, irei escrever agora do jeito correto ‘-‘))) e já temos uma noção de como é o funcionamento do mesmo… Calma senhores, estamos pertinho de começar a <strong>DESENVOLVER UM TEMA ADAPTADO AO WOOCOMMERCE</strong> (<em>olha aí rapaz ‘-‘</em>).</p>
+<p>Controle a euforia e aguarde mais um <strong>POUCO</strong>!!! hahahaha, eu sou mal :3, mas tem um motivo… O motivo é que precisamos saber aonde mexer.</p>
+<p>Como sabemos, o WooCommerce disponibiliza a sobrescrita dos arquivos, podemos muito bem ir lá e sobrescrever o template do jeito que queremos, né não? A resposta poderia ser sim… A não ser que, se você abrir os arquivos de template do WooCommerce, você perceberá que ele é um tanto diferente… Quer ver? Saca só!</p>
+<div class="centerlou"><br>  <img src="/decifrando-o-woocommerce-parte-01/woocommerce-content-single.png"></img><br>  <small>Errr… O que ser isso?</small><br></div>
+
+<p>Calma jovem!!! Não se assuste. Na imagem anterior, segue um pedaço de código do template <em>content-single-product.php</em>, responsável por exibir a single do produto. Percebemos que existe diversos <strong>do_action</strong>, responsável por chamar alguma função ligada ao <strong>hook</strong>! Beleza, mas o que é hook?</p>
+<h2 id="Hooks_do_WooCommerce">Hooks do WooCommerce</h2>
+<p>O WooCommerce trabalha bastante com uma coisa chamada hook, ou se preferir, ganchos. Esses hooks permite que você manipule o código sem editar aquivos do core.</p>
+<p>Dentro do Scaffold do WooCommerce existe um diretório chamado includes, e dentro dele possui um arquivo chamado <strong>wc-template-hooks.php</strong>, lá esta declarado todos os hooks padrões do WooCommerce… Existe também um outro arquivo bastante útil no mesmo diretório - includes/ -, o <strong>wc-template-functions.php</strong>, que trabalha em conjunto com os hooks.</p>
+<p>Para verificarmos qual a função que o hook X está chamando, bastamos verificar qual o hook da determinada action e procurarmos a função correspondente do hook… Entendeu? Hum… Saca só!</p>
+<blockquote>
+<p>Vamos supor que eu quero verificar qual a função está atribuida ao hook (woocommerce_before_single_product_summary) presente no arquivo <strong>content-single-product.php</strong></p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">&lt;?php</span></div><div class="line">  <span class="comment">/**</span></div><div class="line">   * woocommerce_before_single_product_summary hook</div><div class="line">   *</div><div class="line">   *<span class="phpdoc"> @hooked</span> woocommerce_show_product_sale_flash - 10</div><div class="line">   *<span class="phpdoc"> @hooked</span> woocommerce_show_product_images - 20</div><div class="line">   */</div><div class="line">  do_action( <span class="string">'woocommerce_before_single_product_summary'</span> );</div><div class="line"><span class="preprocessor">?&gt;</span></div></pre></td></tr></table></figure>
+
+<img src="/decifrando-o-woocommerce-parte-01/hook.png"></img>
+
+<div class="centerlou"><br>  Saporra é essa? ‘-‘<br>  <small><small>Sim jovem… São duas funções atribuídas a um hook! Hahahahahaha… Negócio é trilouco veei ‘-‘</small></small><br></div>
+
+
+<p>Além disso existe uma “ordem” no hook, no nosso caso o hook <strong>(woocommerce_before_single_product_summary)</strong> possui a ordem 10 e 20 respectivamente as funções woocommerce_show_product_sale_flash e woocommerce_show_product_images, que quando feito a chamada do hook, as ordens irá servir na exibição (10 aparecerá primeiro que 20 ‘-‘).</p>
+<p>Basicamente… O WooCommerce é feito assim, através de hooks! Na próxima postagem iremos fazermos as nossas funções para os hooks… Aguarde!</p>
+<ul>
+<li>Caso tenha alguma dúvida… Não se EXITE em falar, utilize o comentário abaixo ou me chame nas redes sociais!!! </li>
+</ul>
+<p>Fui!</p>
+
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>Matheus Loureiro</h4>
+    <p>Sou frontend e backend - amante de tudo que for bom :), cursando Ciência da computação porém focado em Web. Gosto de usar meu tempo estudando novidades tecnológicas e aos tempos vagos, postar coisas aqui no blog.</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/decifrando-o-woocommerce-parte-01/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/decifrando-o-woocommerce-parte-01/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/decifrando-o-woocommerce-parte-01/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <span class="page-number">•</span>
+    
+    <a class="older-posts" href="/woocommerce-o-que-ha-por-tras-dele/">
+        Woocommerce, o que há por trás dele? →
+    </a>
+    
+</nav>
+  <div id="comment" class="comments-area">
+    <h1 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h1>
+
+    
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    
+</div>
+</main>
+
+
+  
+<footer class="site-footer">
+  
+  <a class="subscribe icon-feed" href="atom.xml"><span class="tooltip">Subscribe!</span></a>
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">Matheus Loureiro</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-44376143-9']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+<script type="text/javascript">
+    var disqus_shortname = 'bloglou';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+</body>
+</html>

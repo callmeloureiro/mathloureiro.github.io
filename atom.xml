@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Matheus Loureiro]]></title>
+  <subtitle><![CDATA[Um entusiasta da web!]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2015-01-18T05:05:36.196Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[Matheus Loureiro]]></name>
+    <email><![CDATA[web@matheusloureiro.com.br]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Decifrando o WooCommerce: Parte 01]]></title>
+    <link href="http://yoursite.com/decifrando-o-woocommerce-parte-01/"/>
+    <id>http://yoursite.com/decifrando-o-woocommerce-parte-01/</id>
+    <published>2015-01-18T02:59:44.000Z</published>
+    <updated>2015-01-18T05:03:35.000Z</updated>
+    <content type="html"><![CDATA[<p>Olá senhoras e senhores, tudo certo? Bom, espero que estejam muito bem, no meu caso estou indo né… Passei um tempo sem postar por falta de tempo mesmo, mas o importante é que estou de volta!!!</p>
+<p>Antes de começarmos, gostaria de agradecer pelos feedback que estou tendo a respeito do blog e pela “Saga WooCommerce”, OBRIGADO!!! Gostaria de <strong>ressaltar</strong> que o feedback e opinão a respeito disso é importantíssimo, pois é com a opinião de vocês que iremos melhorar cada vez mais, pois este blog não é apenas meu, é de todos nós!!! </p>
+<p>Se você ainda não opinou, possui uma dúvida ou quer apenas falar comigo, não se exite em me contactar nas redes sociais e/ou no próprio comentário aqui do blog, irei responde-los com o maior prazer!</p>
+<p>Enfim, chega de blablabla e vamos lá!</p>
+<blockquote>
+<p><strong>LET’S GO GUYS!</strong></p>
+</blockquote>
+<p>Na postagem anterior, <a href="http://www.matheusloureiro.com.br/woocommerce-o-que-ha-por-tras-dele/" target="_blank" rel="external">O que há por trás do WooCommerce</a> aprendemos como é a estrutura do WooCommerce (sim, se escreve desse jeito ‘-‘ (sim, eu não estava escrevendo assim (sim, irei escrever agora do jeito correto ‘-‘))) e já temos uma noção de como é o funcionamento do mesmo… Calma senhores, estamos pertinho de começar a <strong>DESENVOLVER UM TEMA ADAPTADO AO WOOCOMMERCE</strong> (<em>olha aí rapaz ‘-‘</em>).</p>
+<p>Controle a euforia e aguarde mais um <strong>POUCO</strong>!!! hahahaha, eu sou mal :3, mas tem um motivo… O motivo é que precisamos saber aonde mexer.</p>
+<p>Como sabemos, o WooCommerce disponibiliza a sobrescrita dos arquivos, podemos muito bem ir lá e sobrescrever o template do jeito que queremos, né não? A resposta poderia ser sim… A não ser que, se você abrir os arquivos de template do WooCommerce, você perceberá que ele é um tanto diferente… Quer ver? Saca só!</p>
+<div class="centerlou"><br>  <img src="/decifrando-o-woocommerce-parte-01/woocommerce-content-single.png"></img><br>  <small>Errr… O que ser isso?</small><br></div>
+
+<p>Calma jovem!!! Não se assuste. Na imagem anterior, segue um pedaço de código do template <em>content-single-product.php</em>, responsável por exibir a single do produto. Percebemos que existe diversos <strong>do_action</strong>, responsável por chamar alguma função ligada ao <strong>hook</strong>! Beleza, mas o que é hook?</p>
+<h2 id="Hooks_do_WooCommerce">Hooks do WooCommerce</h2>
+<p>O WooCommerce trabalha bastante com uma coisa chamada hook, ou se preferir, ganchos. Esses hooks permite que você manipule o código sem editar aquivos do core.</p>
+<p>Dentro do Scaffold do WooCommerce existe um diretório chamado includes, e dentro dele possui um arquivo chamado <strong>wc-template-hooks.php</strong>, lá esta declarado todos os hooks padrões do WooCommerce… Existe também um outro arquivo bastante útil no mesmo diretório - includes/ -, o <strong>wc-template-functions.php</strong>, que trabalha em conjunto com os hooks.</p>
+<p>Para verificarmos qual a função que o hook X está chamando, bastamos verificar qual o hook da determinada action e procurarmos a função correspondente do hook… Entendeu? Hum… Saca só!</p>
+<blockquote>
+<p>Vamos supor que eu quero verificar qual a função está atribuida ao hook (woocommerce_before_single_product_summary) presente no arquivo <strong>content-single-product.php</strong></p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">&lt;?php</span></div><div class="line">  <span class="comment">/**</span></div><div class="line">   * woocommerce_before_single_product_summary hook</div><div class="line">   *</div><div class="line">   *<span class="phpdoc"> @hooked</span> woocommerce_show_product_sale_flash - 10</div><div class="line">   *<span class="phpdoc"> @hooked</span> woocommerce_show_product_images - 20</div><div class="line">   */</div><div class="line">  do_action( <span class="string">'woocommerce_before_single_product_summary'</span> );</div><div class="line"><span class="preprocessor">?&gt;</span></div></pre></td></tr></table></figure>
+
+<img src="/decifrando-o-woocommerce-parte-01/hook.png"></img>
+
+<div class="centerlou"><br>  Saporra é essa? ‘-‘<br>  <small><small>Sim jovem… São duas funções atribuídas a um hook! Hahahahahaha… Negócio é trilouco veei ‘-‘</small></small><br></div>
+
+
+<p>Além disso existe uma “ordem” no hook, no nosso caso o hook <strong>(woocommerce_before_single_product_summary)</strong> possui a ordem 10 e 20 respectivamente as funções woocommerce_show_product_sale_flash e woocommerce_show_product_images, que quando feito a chamada do hook, as ordens irá servir na exibição (10 aparecerá primeiro que 20 ‘-‘).</p>
+<p>Basicamente… O WooCommerce é feito assim, através de hooks! Na próxima postagem iremos fazermos as nossas funções para os hooks… Aguarde!</p>
+<ul>
+<li>Caso tenha alguma dúvida… Não se EXITE em falar, utilize o comentário abaixo ou me chame nas redes sociais!!! </li>
+</ul>
+<p>Fui!</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Olá senhoras e senhores, tudo certo? Bom, espero que estejam muito bem, no meu caso estou indo né… Passei um tempo sem postar por falta d]]>
+    </summary>
+    
+      <category term="WooCommerce" scheme="http://yoursite.com/categorias/woocommerce/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Woocommerce, o que há por trás dele?]]></title>
+    <link href="http://yoursite.com/woocommerce-o-que-ha-por-tras-dele/"/>
+    <id>http://yoursite.com/woocommerce-o-que-ha-por-tras-dele/</id>
+    <published>2015-01-07T22:21:27.000Z</published>
+    <updated>2015-01-08T02:07:07.000Z</updated>
+    <content type="html"><![CDATA[<p>Olha eu novamente galera ‘-‘, antes de começar o post gostaria de agradecer a todos aqueles que deram seu feedback referente a primeira postagem, percebi que houve uma aceitação muito boa e eu gostaria agradecê-los por isso!</p>
+<blockquote>
+<p><strong>OBRIGADOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</strong><br><strong>PESSOALLLLLLLLLLLLLLLL VOCÊS SÃO F0D4S PRA C4R4LH0…</strong></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="number">01101111</span> <span class="number">01100010</span> <span class="number">01110010</span> <span class="number">01101001</span> <span class="number">01100111</span> <span class="number">01100001</span> </div><div class="line"><span class="number">01100100</span> <span class="number">01101111</span> <span class="number">00100000</span> <span class="number">01100101</span> <span class="number">01101101</span> <span class="number">00100000</span> </div><div class="line"><span class="number">01101101</span> <span class="number">01101111</span> <span class="number">01100100</span> <span class="number">01101111</span> </div><div class="line"><span class="number">00100000</span> <span class="number">01101110</span> <span class="number">01100101</span> <span class="number">01110010</span> <span class="number">01100100</span> <span class="number">00100001</span></div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="string">"entendedores entenderão '-'"</span></div></pre></td></tr></table></figure>
+
+<p>Então é isso… chega de agradecimento e vamos para o que interessa <big>##WOOCOMMERCE##<big>!</big></big></p>
+<blockquote>
+<p><strong>LET’S GO GUYS!</strong></p>
+</blockquote>
+<p>Na postagem anterior, onde começamos o <a href="http://www.matheusloureiro.com.br/getting-started-woocommerce/" target="_blank" rel="external">Getting Started Woocommerce</a>, aprendemos o introdutório mesmo do que é o <strong>woocommerce</strong> e como instalar no nosso wordpress, porém, foi algo muito simples, que tal nos aprofundarmos um pouco no assunto?</p>
+<div class="centerlou"><br>    <img src="/woocommerce-o-que-ha-por-tras-dele/submarino.jpg"></img><br>    <small><small>Fonte: <a href="http://wallysou.com/wp-content/uploads/2010/11/submarino.jpg" target="_blank" rel="external">http://wallysou.com/wp-content/uploads/2010/11/submarino.jpg</a></small></small><br>    <em><small>qual imagem melhor poderia substituir essa? ‘-‘</small></em><br></div>
+
+<p>O Woocommerce traz consigo um layout já pronto, quando você acessa qualquer página que o woocommerce gerou, percebe-se de que há alguma coisa dentro delas. Você deve está se perguntando… Matheus, é só editar o CSS? Eu te respondo… Jovem, é uma alternativa, mas cá entre nós, nem eu nem você queremos ficar apenas nisso; Eu quero conseguir fazer o negócio do ‘0’ e você?</p>
+<p>A estrutura do WooCommerce é assim oh:</p>
+<blockquote>
+<p>Scaffold do Woocommerce</p>
+<pre><code>-<span class="ruby"> woocommerce/
+</span>    assets/
+    dummy-data/
+    i18n/
+    includes/
+    templates/
+    licence.txt
+    readme.txt
+    uninstall.php
+    woocommerce.php
+</code></pre></blockquote>
+<p><em>Obs: Esse Scaffold está dentro da pasta plugins/</em></p>
+<p>PESSOALLLLLLLLL!!! Lembra que eu falei que o woocommerce vinha com um layout já pronto? Advinha onde está esse layout? ‘-‘<br>Tá… vou falar, ele está dentro da pasta <strong>templates/</strong></p>
+<blockquote>
+<p>Scaffold templates/</p>
+<pre><code>- woocommerce/
+    templates/
+        cart/
+        checkout/
+        emails/
+        <span class="keyword">global</span>/
+        <span class="keyword">loop</span>/
+        myaccount/
+        notices/
+        <span class="keyword">order</span>/
+</code></pre></blockquote>
+<p>Dentro da pasta templates, existe o layout padrão do woocommerce…</p>
+<ul>
+<li><p>cart/carty-empty.php &gt; Ele é responsável pelo template que há no carrinho de compras quando está vazio (cart/ diretório onde há templates de carrinho);</p>
+<img src="/woocommerce-o-que-ha-por-tras-dele/cart.png"></img>
+</li>
+<li><p>checkout/form-checkout.php &gt; Responsável pelo template do formulário de checkout (checkout/ diretório onde há templates de checkout);</p>
+<img src="/woocommerce-o-que-ha-por-tras-dele/form-checkout.png"></img>
+</li>
+<li><p>global/breadcrumb.php &gt; Responsável pelo template do breadcrumb (global/ refere-se ao diretório que contém templates comuns a várias áreas);</p>
+</li>
+<li><p>loop/add-to-cart.php &gt; Responável pelo template do botão que adiciona ao carrinho (loop/ diretório onde há templates de loop);</p>
+</li>
+<li><p>myaccount/my-account.php &gt; Responsável pelo template da minha conta (myaccount);</p>
+<img src="/woocommerce-o-que-ha-por-tras-dele/account.png"></img>
+</li>
+<li><p>notices/ &gt; Diretório onde há templates de notícias do woocommerce;</p>
+<img src="/woocommerce-o-que-ha-por-tras-dele/notices.png"></img>
+</li>
+<li><p>order/order-details.php &gt; Responsável pelo template dos Meus Pedidos (order/ diretório onde há templates de pedidos).</p>
+</li>
+</ul>
+<p>Bom… Agora sabemos o Scaffold do Woocommerce, mas calma, ainda não acabou! hahahahahaha (falei que esse post seria mais completo!)</p>
+<p>Você deve está se perguntando… Matheus, agora eu já sei onde editar meu template, posso começar a editar? Eu te digo jovem, começar a editar, AI <strong>NÃO</strong>! Mas porque? Imagine que o plugin sofre uma atualização e ele precisa atualizar os arquivos default do woocommerce, então, podemos perder todo o trabalho que tivemos… Pensando nisso, a galera do WooCommerce disponibilizou a sobrescrita desses arquivos.</p>
+<blockquote>
+<p>Sobrescrita do Woocommerce</p>
+</blockquote>
+<p>Para sobrescrevermos esses arquivos, precisamos criar uma pasta chamada <strong>woocommerce</strong> dentro do nosso tema do wordpress, em seguida, dizermos qual o arquivo iremos sobrescrever… Exemplo:</p>
+<p><strong>Eu quero sobrecrever o template cart/carty-empty.php responsável pelo carrinho vazio, como devo proceder ?</strong></p>
+<p>Jovem, dentro do seu tema do wordpress, você irá criar uma pasta chamada woocommerce, como dito anteriormente, porém o arquivo carty-empty.php está dentro da pasta cart/, logo, o que devemos fazer? Criar uma pasta chamada cart dentro da pasta woocommerce, ficando assim oh:</p>
+<pre><code>- <span class="keyword">wp</span>-content
+    themes/
+        seu_tema/
+            woocommerce/
+                cart/
+                    carty-<span class="built_in">empty</span>.php
+</code></pre><p>E então só copiar o que está dentro de <em>plugins/woocommerce/cart/carty-empty.php</em> para o seu arquivo carty-empty.php que está dentro do seu tema, e fazer as devidas alterações. Assim evitamos de que uma atualização nos traga uma dor de cabeça!</p>
+<p>Por hoje é só… Agradeço a atenção e bons estudos!</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Olha eu novamente galera ‘-‘, antes de começar o post gostaria de agradecer a todos aqueles que deram seu feedback referente a primeira p]]>
+    </summary>
+    
+      <category term="WooCommerce" scheme="http://yoursite.com/categorias/woocommerce/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Getting Started Woocommerce!]]></title>
+    <link href="http://yoursite.com/getting-started-woocommerce/"/>
+    <id>http://yoursite.com/getting-started-woocommerce/</id>
+    <published>2015-01-07T01:16:39.000Z</published>
+    <updated>2015-01-08T02:04:44.000Z</updated>
+    <content type="html"><![CDATA[<p>Eae pessoooooooal… Tranquilo? Gostaria de inaugurar meu blog com um post diferenciado, por ser o primeiro post e também por ser uma nova experiência que estarei tendo… Sim, iremos aprender <a href="http://www.woothemes.com/woocommerce/" target="_blank" rel="external">WooCommerce</a> juntos!</p>
+<blockquote>
+<p><strong class="tituloGrande">Preparados?</strong><br>PREPARA! Que agora é hora, do show das…<br>Não, pera ‘-‘</p>
+</blockquote>
+<p>Antes de começarmos… precisamos saber o que é o “treco” né?</p>
+<h2 id="O_que_é_woocommerce?">O que é woocommerce?</h2>
+<p><img src="/getting-started-woocommerce/woocommerce.png"></img><br>Trata-se de um plugin que adiciona a funcionalidade de <strong>Ecommerce</strong> no seu wordpress e que vêm crescendo cada vez mais, muitos usuários estão migrando para o woocommerce devido o fácil manuseio, grande acervo de plugins e uma comunidade bastante ativa. </p>
+<p>Para os desenvolvedores que criam temas para o wordpress, torna-se fácil a criação(ou adaptação) de(o) tema para woocommerce, assim, temos um grande poder nas nossas mãos pois estamos desenvolvendo uma plataforma de ecommerce em um lugar onde tudo é muito interativo.</p>
+<p>Cujo dados do <a href="https://wappalyzer.com/categories/ecommerce" target="_blank" rel="external">WappAnalyser</a>, percebe-se que o uso do WooCommerce está em 18% dos sites analisados e ocupando a segunda posição, o que leva a crer que é um número bastante razoavel, perdendo apenas para o Prestashop (primeiro lugar).</p>
+<p>Mas chega de bla bla bla e vamos colocar as mãos na massa… </p>
+<blockquote>
+<p><strong>LET’S GO GUYS!</strong></p>
+</blockquote>
+<p>Devemos efetuar o download do plugin e instalar no nosso wordpress, ok Matheus… Comofaz? ‘-‘ Simples! Clique <a href="http://downloads.wordpress.org/plugin/woocommerce.zip" target="_blank" rel="external">neste link</a> que você já irá fazer o download da ultima versão do woocommerce e basta importar o tema para o seu wordpress. Siga esses Passos, Painel do Wordpress &gt; Plugin &gt; Adicionar Novo &gt; Fazer Upload do plugin. <em>sou muito bom né?</em></p>
+<p>Temos uma segunda forma também de instalar nosso woocommerce também, através do próprio Wordpress ‘-‘, Matheus!!!!! Comofaz? Simples Jovem! Vá no Painel do Wordpress &gt; Plugins &gt; Adicionar Novo, pesquise por <strong>woocommerce</strong>.</p>
+<blockquote>
+<p>Parabéns!!! Você instalou o Woocommerce!</p>
+</blockquote>
+<p>E agora? Aguarde… Na próxima postagem irei demonstrar mais a parte conceitual do WooCommerce. Aguarde! ‘-‘</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Eae pessoooooooal… Tranquilo? Gostaria de inaugurar meu blog com um post diferenciado, por ser o primeiro post e também por ser uma nova ]]>
+    </summary>
+    
+      <category term="started" scheme="http://yoursite.com/tags/started/"/>
+    
+      <category term="WooCommerce" scheme="http://yoursite.com/categorias/woocommerce/"/>
+    
+  </entry>
+  
+</feed>
