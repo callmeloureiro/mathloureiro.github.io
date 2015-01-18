@@ -3,9 +3,9 @@
   <title><![CDATA[Matheus Loureiro]]></title>
   <subtitle><![CDATA[Um entusiasta da web!]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2015-01-18T16:36:37.324Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://www.matheusloureiro.com.br/"/>
+  <updated>2015-01-18T17:15:46.367Z</updated>
+  <id>http://www.matheusloureiro.com.br/</id>
   
   <author>
     <name><![CDATA[Matheus Loureiro]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Decifrando o WooCommerce: Parte 01]]></title>
-    <link href="http://yoursite.com/decifrando-o-woocommerce-parte-01/"/>
-    <id>http://yoursite.com/decifrando-o-woocommerce-parte-01/</id>
+    <link href="http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-01/"/>
+    <id>http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-01/</id>
     <published>2015-01-18T02:59:44.000Z</published>
     <updated>2015-01-18T16:36:24.000Z</updated>
     <content type="html"><![CDATA[<p>Olá senhoras e senhores, tudo certo? Bom, espero que estejam muito bem, no meu caso estou indo né… Passei um tempo sem postar por falta de tempo mesmo, mas o importante é que estou de volta!!!</p>
@@ -58,14 +58,14 @@
     <![CDATA[<p>Olá senhoras e senhores, tudo certo? Bom, espero que estejam muito bem, no meu caso estou indo né… Passei um tempo sem postar por falta d]]>
     </summary>
     
-      <category term="WooCommerce" scheme="http://yoursite.com/categorias/woocommerce/"/>
+      <category term="WooCommerce" scheme="http://www.matheusloureiro.com.br/categorias/woocommerce/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Woocommerce, o que há por trás dele?]]></title>
-    <link href="http://yoursite.com/woocommerce-o-que-ha-por-tras-dele/"/>
-    <id>http://yoursite.com/woocommerce-o-que-ha-por-tras-dele/</id>
+    <link href="http://www.matheusloureiro.com.br/woocommerce-o-que-ha-por-tras-dele/"/>
+    <id>http://www.matheusloureiro.com.br/woocommerce-o-que-ha-por-tras-dele/</id>
     <published>2015-01-07T22:21:27.000Z</published>
     <updated>2015-01-08T02:07:07.000Z</updated>
     <content type="html"><![CDATA[<p>Olha eu novamente galera ‘-‘, antes de começar o post gostaria de agradecer a todos aqueles que deram seu feedback referente a primeira postagem, percebi que houve uma aceitação muito boa e eu gostaria agradecê-los por isso!</p>
@@ -157,14 +157,14 @@
     <![CDATA[<p>Olha eu novamente galera ‘-‘, antes de começar o post gostaria de agradecer a todos aqueles que deram seu feedback referente a primeira p]]>
     </summary>
     
-      <category term="WooCommerce" scheme="http://yoursite.com/categorias/woocommerce/"/>
+      <category term="WooCommerce" scheme="http://www.matheusloureiro.com.br/categorias/woocommerce/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Getting Started Woocommerce!]]></title>
-    <link href="http://yoursite.com/getting-started-woocommerce/"/>
-    <id>http://yoursite.com/getting-started-woocommerce/</id>
+    <link href="http://www.matheusloureiro.com.br/getting-started-woocommerce/"/>
+    <id>http://www.matheusloureiro.com.br/getting-started-woocommerce/</id>
     <published>2015-01-07T01:16:39.000Z</published>
     <updated>2015-01-08T02:04:44.000Z</updated>
     <content type="html"><![CDATA[<p>Eae pessoooooooal… Tranquilo? Gostaria de inaugurar meu blog com um post diferenciado, por ser o primeiro post e também por ser uma nova experiência que estarei tendo… Sim, iremos aprender <a href="http://www.woothemes.com/woocommerce/" target="_blank" rel="external">WooCommerce</a> juntos!</p>
@@ -191,9 +191,9 @@
     <![CDATA[<p>Eae pessoooooooal… Tranquilo? Gostaria de inaugurar meu blog com um post diferenciado, por ser o primeiro post e também por ser uma nova ]]>
     </summary>
     
-      <category term="started" scheme="http://yoursite.com/tags/started/"/>
+      <category term="started" scheme="http://www.matheusloureiro.com.br/tags/started/"/>
     
-      <category term="WooCommerce" scheme="http://yoursite.com/categorias/woocommerce/"/>
+      <category term="WooCommerce" scheme="http://www.matheusloureiro.com.br/categorias/woocommerce/"/>
     
   </entry>
   
