@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Um entusiasta da web!]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.matheusloureiro.com.br/"/>
-  <updated>2015-01-25T02:48:40.052Z</updated>
+  <updated>2015-02-11T23:37:47.709Z</updated>
   <id>http://www.matheusloureiro.com.br/</id>
   
   <author>
@@ -13,6 +13,88 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Decifrando o WooCommerce Parte 02]]></title>
+    <link href="http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-02/"/>
+    <id>http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-02/</id>
+    <published>2015-02-11T21:38:35.000Z</published>
+    <updated>2015-02-11T23:37:20.000Z</updated>
+    <content type="html"><![CDATA[<p>Senhoras e senhores… Depois de um tempo sem postar, estamos novamente continuando o show! Estava realmente sem tempo e gostaria de agradece-los pela cobrança que tive para fazer uma nova matéria :), isso foi fantástico!</p>
+<p>Continuando o show… Vamos prosseguir a postagem anterior, caso você não tenha visto ainda, <a href="http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-01/" target="_blank" rel="external">Clique aqui</a> e sinta o poder que você já poderá conseguir fazer :).</p>
+<blockquote>
+<p><strong>LET’S GO GUYS!</strong></p>
+</blockquote>
+<p>Já sabemos como o WooCommerce funciona, então vamos listar agora o que já vimos aqui…</p>
+<ul>
+<li>Scaffold do WooCommerce</li>
+<li>Sobreposição dos arquivos templates do WooCommerce</li>
+<li>Funcionamento de um hook</li>
+</ul>
+<p><small>Caso você tenha perdido alguma dessas matérias, <a href="http://www.matheusloureiro.com.br/categorias/woocommerce/" target="_blank" rel="external">entre aqui</a> e veja todo o material relacionado a WooCommerce.</small></p>
+<p>Então… Estamos próximos a começar a desenvolver de fato, mas antes, irei listar algumas coisas que costumo utilizar e porque deles existirem no meu projeto.</p>
+<ul>
+<li><a href="http://foundation.zurb.com" target="_blank" rel="external">Foundation</a><ul>
+<li>Framework CSS, foudation tornou-se uma mão na roda no desenvolvimento, ajudando na agilidade do meu projeto como também na qualidade dele. Normalmente vocês devem utilizar o <a href="http://getbootstrap.com/" target="_blank" rel="external">Bootstrap</a>, mas eu particulamente não gosto, achei o foundation bem mais inteligente do que o Bootstrap principalmente quando usado algum <strong>Pré-processador</strong>…</li>
+</ul>
+</li>
+<li><a href="http://sass-lang.com" target="_blank" rel="external">SASS</a><ul>
+<li>Sass pré-processador, antes de escolher qual pre processador utilizar, testei um por um e me simpatizei muito com o sass… E quando percebo, lá na doc do <strong>FOUNDATION</strong> percebemos também que eles utilizam o sass ‘-‘, isso foi muito da hora! <a href="http://lesscss.org" target="_blank" rel="external">LESS</a> também é muito da hora, mas… Confiram essa tabela e tirem suas conclusões: <a href="http://www.hongkiat.com/blog/sass-vs-less/" target="_blank" rel="external">Sass x Less</a></li>
+</ul>
+</li>
+<li><a href="http://gulpjs.com" target="_blank" rel="external">Gulp</a><ul>
+<li>Gulp automatizador, com o mesmo propópsito do <a href="http://gruntjs.com" target="_blank" rel="external">Grunt</a>, o Gulp veio para agilizar mais ainda o trabalho que o Grunt fazia, sendo o Gulp mais rápido na execução de tarefas… Diferentemente do Grunt, você escreve tarefas do Gulp em JavaScript(algo parecido com o nodeJS) e não em JSON usado no Grunt. O diferencial realmente está no quesito de velocidade que no resultado final dá uma grande diferença.</li>
+</ul>
+</li>
+<li><a href="http://roots.io/" target="_blank" rel="external">Roots.io</a><ul>
+<li>Roots starter theme wordpress, para quem não conhece o Roots, ele é um starter theme para wordpress, ou seja, um tema já pronto para você começar a desenvolver. Ele é um projeto muito show, tem alguns diferenciais bacanas como o Wrapper. Pra galera que conhece o Laravel, o wrapper funciona como o @extends, onde há uma base e você irá escrever apenas entre o body, preservando assim o header e o footer sem a necessidade de ficar dando include :). Porém ele default tras consigo o bootstrap e grunt, maaaas, como eu não curto tanto eles, então tive a necessidade de criar um a meu gosto né? ‘-‘, Apresento-lhes o <a href="https://github.com/mathloureiro/Loume" target="_blank" rel="external">LOUME</a>, baseado no <a href="https://github.com/cicerohen/gromf" target="_blank" rel="external">GROMF</a>, um tema baseado no Roots.io porém utilizando gulp, foundation e sass ‘-‘, da hora né?</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Então é isso, agora vamos colocar mão na massa!</p>
+</blockquote>
+<div class="centerlou"><br>  <small><small>Fonte: <a href="https://zigjonas.files.wordpress.com/2011/04/paisagismotd-17.jpg" target="_blank" rel="external">https://zigjonas.files.wordpress.com/2011/04/paisagismotd-17.jpg</a></small></small><br>  <img src="/decifrando-o-woocommerce-parte-02/paisagismotd-17.jpg"></img><br></div>
+
+<p>O que basicamente precisamos saber nós já sabemos então não há nada que nós impeça de desenvolver um tema agora de fato, então na sua function.php iremos começar a brincar ‘-‘.</p>
+<p>Como falado ao decorrer dessa série, os hooks são responsáveis por atribuir a função no seu projeto, logo leva a crer que além do hook existe uma função atrelada e ele. Há três formas de manipularmos os hooks:</p>
+<ul>
+<li>Adicionando add_action();</li>
+<li>Removendo remove_action();</li>
+<li>Filtrando add_filter();</li>
+</ul>
+<p>add_action, usado para adicionar uma função a um hook.<br>remove_action, usado para remover uma função de um hook.<br>add_filter, usado para sobrescrever certas funções.</p>
+<p>Vamos supor que eu quero remover a sidebar do WooCommeerce, então já sabemos o que utilizar… Concordam comigo que é a remove_action()? Ok, é ela ‘-‘.</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">add_action( <span class="string">'woocommerce_sidebar'</span>, <span class="string">'woocommerce_get_sidebar'</span>, <span class="number">10</span>)</div></pre></td></tr></table></figure>
+
+
+<p>Esse é o hook responsável por chamar a sidebar no nosso site… Se lermos ele um pouco, veremos que existe uma função chamada woocommerce_get_sidebar, com o nome do hook denominado por woocommerce_sidebar e que tem a posição ou ordem 10. Bastamos trocar o add_action por remove_action, ficando assim:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">remove_action( <span class="string">'woocommerce_sidebar'</span>, <span class="string">'woocommerce_get_sidebar'</span>, <span class="number">10</span>).</div></pre></td></tr></table></figure>
+
+<p>Beleza, conseguimos remover a sidebar :).</p>
+<p>Vamos supor que eu quero adicionar uma sidebar criada por mim no lugar da sidebar original do WooCommerce. </p>
+<p>Então, depois de removida, temos esse espaço do hook disponível para colocarmos o que quisermos, então bastamos escrever isso aqui: </p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">add_action( <span class="string">'woocommerce_sidebar'</span>, <span class="string">'SUA_FUNCAO'</span>, <span class="number">10</span>);</div></pre></td></tr></table></figure>
+
+<p>Será substituida pela a sua função :).</p>
+<p>Para finalizar, vamos supor que eu quero mudar o nome que aparece na tab descrição do produto… Quero colocar o nome do produto como título.</p>
+<p>Como já existe uma função responsável pra isso, então podemos sobrescreve-la pela nossa… Ficando assim:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">add_filter( <span class="string">'woocommerce_product_tabs'</span>, <span class="string">'loureiro_mudaNome_titulo_tabs'</span>, <span class="number">10</span>, <span class="number">1</span> );</div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">loureiro_mudaNome_titulo_tabs</span><span class="params">( <span class="variable">$tabs</span> )</span> </span>{</div><div class="line">  <span class="keyword">global</span> <span class="variable">$post</span>;</div><div class="line">  <span class="keyword">if</span> ( <span class="keyword">isset</span>( <span class="variable">$tabs</span>[<span class="string">'description'</span>][<span class="string">'title'</span>] ) )</div><div class="line">    <span class="variable">$tabs</span>[<span class="string">'description'</span>][<span class="string">'title'</span>] = <span class="variable">$post</span><span class="variable">-&gt;post_title</span>;</div><div class="line">  <span class="keyword">return</span> <span class="variable">$tabs</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>Voy lá! Conseguimos mudar o nome da tab :).</p>
+<p>Então por hoje é só galera! Espero que tenham gostado, até a próxima!</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Senhoras e senhores… Depois de um tempo sem postar, estamos novamente continuando o show! Estava realmente sem tempo e gostaria de agrade]]>
+    </summary>
+    
+      <category term="WooCommerce" scheme="http://www.matheusloureiro.com.br/categorias/woocommerce/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Decifrando o WooCommerce: Parte 01]]></title>
