@@ -1,22 +1,365 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.theme.title | xml_escape }}</title>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <description>{{ site.theme.description | xml_escape }}</description>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    {% for post in site.posts limit:15 %}
+    <title>Blog do Loureiro</title>
+    <atom:link href="http://www.matheusloureiro.com.br/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>http://www.matheusloureiro.com.br/</link>
+    <description>A website with blog posts and pages</description>
+    <pubDate>Mon, 06 Apr 2015 04:40:34 -0300</pubDate>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <title>Hello Ruby!</title>
+        <link>http://www.matheusloureiro.com.br/hello-ruby</link>
+        <guid isPermaLink="true">http://www.matheusloureiro.com.br/hello-ruby</guid>
+        <description>&lt;p&gt;Olá pessoas o/, depois de um bom tempo sem postar… Aqui está eu com uma nova casa! Decidi adotar o &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; como minha mais nova ferramenta (uma boa escolha até :p).&lt;/p&gt;
+
+&lt;p&gt;Acredito que esse título seja um tanto curioso, possamos dizer que ele já diz tudo… Sim, eu decidi migrar do mundo PHP e partir pra experimentar esse tão falado ruby… Posso dizer ainda mais que foi uma boa escolha pois me trouxe bastante benefícios que somarei ao meu pouco conhecimento, não que o PHP não poderia ter me proporcionado isso, mas tive esse privilégios logo de cara com o ruby!&lt;/p&gt;
+
+&lt;p&gt;Porque eu fiz isso??? Boa pergunta… Estava satisfeito com php até, principalmente depois de ter descoberto o LARAVEL, mas por motivo de cansaço (passei 4 anos utilizando-o) decidi mudar…&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Eu queria mudar, eu queria mudar, eu queria mudar, eu queria mudaaar (8)…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Houve uma desvantagem em ter feito isso… Meus amigos pythonistas agora ficam querendo discutindo comigo só porque eu falo isso: ruby »»» python (povo sem graça hu3hu3hu3hu3), brincadeiras a parte, mas falando sério, parece que os pythonistas e os rubystas quando se encontram é sinônimo de guerra pra argumentar qual a melhor linguagem… Sabe o que penso sobre isso? &lt;strong&gt;Porra, vai se ferra, negócio de ficar com canecagem pra linguagem, importante é ganhar dinheiro e entregar um bom projeto independente do que foi usado, pode ser até em cobol que está valendo.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Sério, isso me deixa puto ‘-‘&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Uma dica: Se você está em dúvida em o que usar, faça isso… Teste todas e use a que mais te agrada, essa sim vai te dar uma boa produtividade (pois você gostará de utiliza-la) e consequentemente pagará as suas contas… Logo, essa é a melhor linguagem que possa existir, né não?&lt;/p&gt;
+
+&lt;p&gt;O que me levou a usar o Ruby? Encontrei no Ruby uma boa linguagem de programação que me proporciona um conforto enorme na hora de codificar, testei outras antes de partir pro ruby como: Python, Scala, Elixir… Mas nenhum conseguiu superar o ruby (ao meu gosto). Quando somado o Ruby com o Rails, é a mesma coisa que unir o útil ao agradável; Rails por sua vez, conta com uma comunidade bastante ativa e que gostam de ajudar, além de que existe um acervo enorme de ferramentas que possam auxiliar e agilizar o teu desenvolvimento, isso é legal. Acredito que esses foram os maiores motivos que me levaram a adotar o ruby.&lt;/p&gt;
+
+&lt;p&gt;Aos que acompanham meu blog atrás de conteúdo de wordpress/woocommerce, fique tranquilo, continuarei postando algumas experiências e dicas acerca… Calma, eu ainda gosto do php :p&lt;/p&gt;
+
+&lt;p&gt;Então é isso, se você deseja compartilhar alguma experiência, fique a vontade para utilizar o comentário daqui de baixo… Será uma honra bater um papo sobre!&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 06 Apr 2015 00:00:00 -0300</pubDate>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Decifrando o WooCommerce Parte 02</title>
+        <link>http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-02</link>
+        <guid isPermaLink="true">http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-02</guid>
+        <description>&lt;p&gt;Senhoras e senhores… Depois de um tempo sem postar, estamos novamente continuando o show! Estava realmente sem tempo e gostaria de agradece-los pela cobrança que tive para fazer uma nova matéria :), isso foi fantástico!&lt;/p&gt;
+
+&lt;p&gt;Continuando o show… Vamos prosseguir a postagem anterior, caso você não tenha visto ainda, &lt;a href=&quot;http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-01/&quot;&gt;Clique aqui&lt;/a&gt; e sinta o poder que você já poderá conseguir fazer :).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;LET’S GO GUYS!&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Já sabemos como o WooCommerce funciona, então vamos listar agora o que já vimos aqui…
+* Scaffold do WooCommerce
+* Sobreposição dos arquivos templates do WooCommerce
+* Funcionamento de um hook&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;Caso você tenha perdido alguma dessas matérias, &lt;a href=&quot;http://www.matheusloureiro.com.br/categorias/woocommerce/&quot;&gt;entre aqui&lt;/a&gt; e veja todo o material relacionado a WooCommerce.&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Então… Estamos próximos a começar a desenvolver de fato, mas antes, irei listar algumas coisas que costumo utilizar e porque deles existirem no meu projeto.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://foundation.zurb.com&quot;&gt;Foundation&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Framework CSS, foudation tornou-se uma mão na roda no desenvolvimento, ajudando na agilidade do meu projeto como também na qualidade dele. Normalmente vocês devem utilizar o &lt;a href=&quot;http://getbootstrap.com/&quot;&gt;Bootstrap&lt;/a&gt;, mas eu particulamente não gosto, achei o foundation bem mais inteligente do que o Bootstrap principalmente quando usado algum &lt;strong&gt;Pré-processador&lt;/strong&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sass-lang.com&quot;&gt;SASS&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Sass pré-processador, antes de escolher qual pre processador utilizar, testei um por um e me simpatizei muito com o sass… E quando percebo, lá na doc do &lt;strong&gt;FOUNDATION&lt;/strong&gt; percebemos também que eles utilizam o sass ‘-‘, isso foi muito da hora! &lt;a href=&quot;http://lesscss.org&quot;&gt;LESS&lt;/a&gt; também é muito da hora, mas… Confiram essa tabela e tirem suas conclusões: &lt;a href=&quot;http://www.hongkiat.com/blog/sass-vs-less/&quot;&gt;Sass x Less&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gulpjs.com&quot;&gt;Gulp&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Gulp automatizador, com o mesmo propópsito do &lt;a href=&quot;http://gruntjs.com&quot;&gt;Grunt&lt;/a&gt;, o Gulp veio para agilizar mais ainda o trabalho que o Grunt fazia, sendo o Gulp mais rápido na execução de tarefas… Diferentemente do Grunt, você escreve tarefas do Gulp em JavaScript(algo parecido com o nodeJS) e não em JSON usado no Grunt. O diferencial realmente está no quesito de velocidade que no resultado final dá uma grande diferença.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://roots.io/&quot;&gt;Roots.io&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Roots starter theme wordpress, para quem não conhece o Roots, ele é um starter theme para wordpress, ou seja, um tema já pronto para você começar a desenvolver. Ele é um projeto muito show, tem alguns diferenciais bacanas como o Wrapper. Pra galera que conhece o Laravel, o wrapper funciona como o @extends, onde há uma base e você irá escrever apenas entre o body, preservando assim o header e o footer sem a necessidade de ficar dando include :). Porém ele default tras consigo o bootstrap e grunt, maaaas, como eu não curto tanto eles, então tive a necessidade de criar um a meu gosto né? ‘-‘, Apresento-lhes o &lt;a href=&quot;https://github.com/mathloureiro/Loume&quot;&gt;LOUME&lt;/a&gt;, baseado no &lt;a href=&quot;https://github.com/cicerohen/gromf&quot;&gt;GROMF&lt;/a&gt;, um tema baseado no Roots.io porém utilizando gulp, foundation e sass ‘-‘, da hora né?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Então é isso, agora vamos colocar mão na massa!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;O que basicamente precisamos saber nós já sabemos então não há nada que nós impeça de desenvolver um tema agora de fato, então na sua function.php iremos começar a brincar ‘-‘.&lt;/p&gt;
+
+&lt;p&gt;Como falado ao decorrer dessa série, os hooks são responsáveis por atribuir a função no seu projeto, logo leva a crer que além do hook existe uma função atrelada e ele. Há três formas de manipularmos os hooks&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Adicionando add_action();&lt;/li&gt;
+  &lt;li&gt;Removendo remove_action();&lt;/li&gt;
+  &lt;li&gt;Filtrando add_filter();&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;add_action, usado para adicionar uma função a um hook. &lt;br /&gt;
+remove_action, usado para remover uma função de um hook. &lt;br /&gt;
+add_filter, usado para sobrescrever certas funções. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vamos supor que eu quero remover a sidebar do WooCommeerce, então já sabemos o que utilizar… Concordam comigo que é a remove_action()?&lt;/p&gt;
+
+&lt;p&gt;Ok, é ela ‘-‘.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;add_action( &amp;#39;woocommerce_sidebar&amp;#39;, &amp;#39;woocommerce_get_sidebar&amp;#39;, 10)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esse é o hook responsável por chamar a sidebar no nosso site… Se lermos ele um pouco, veremos que existe uma função chamada woocommerce_get_sidebar, com o nome do hook denominado por woocommerce_sidebar e que tem a posição ou ordem 10. Bastamos trocar o add_action por remove_action, ficando assim:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;remove_action( &amp;#39;woocommerce_sidebar&amp;#39;, &amp;#39;woocommerce_get_sidebar&amp;#39;, 10).&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Beleza, conseguimos remover a sidebar :).&lt;/p&gt;
+
+&lt;p&gt;Vamos supor que eu quero adicionar uma sidebar criada por mim no lugar da sidebar original do WooCommerce.&lt;/p&gt;
+
+&lt;p&gt;Então, depois de removida, temos esse espaço do hook disponível para colocarmos o que quisermos, então bastamos escrever isso aqui:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;add_action( &amp;#39;woocommerce_sidebar&amp;#39;, &amp;#39;SUA_FUNCAO&amp;#39;, 10);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Será substituida pela a sua função :).&lt;/p&gt;
+
+&lt;p&gt;Para finalizar, vamos supor que eu quero mudar o nome que aparece na tab descrição do produto… Quero colocar o nome do produto como título.&lt;/p&gt;
+
+&lt;p&gt;Como já existe uma função responsável pra isso, então podemos sobrescreve-la pela nossa… Ficando assim:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;add_filter( &amp;#39;woocommerce_product_tabs&amp;#39;, &amp;#39;loureiro_mudaNome_titulo_tabs&amp;#39;, 10, 1 );&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;x&quot;&gt;function loureiro_mudaNome_titulo_tabs( $tabs ) {&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    global $post;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    if ( isset( $tabs[&amp;#39;description&amp;#39;][&amp;#39;title&amp;#39;] ) )&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;      $tabs[&amp;#39;description&amp;#39;][&amp;#39;title&amp;#39;] = $post-&amp;gt;post_title;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;    return $tabs;&lt;/span&gt;
+&lt;span class=&quot;x&quot;&gt;  }&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Voy lá! Conseguimos mudar o nome da tab :).&lt;/p&gt;
+
+&lt;p&gt;Então por hoje é só galera! Espero que tenham gostado, até a próxima!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 11 Feb 2015 00:00:00 -0300</pubDate>
+      </item>
+    
+      <item>
+        <title>Decifrando o WooCommerce Parte 01</title>
+        <link>http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-01</link>
+        <guid isPermaLink="true">http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-01</guid>
+        <description>&lt;p&gt;Olá senhoras e senhores, tudo certo? Bom, espero que estejam muito bem, no meu caso estou indo né… Passei um tempo sem postar por falta de tempo mesmo, mas o importante é que estou de volta!!!&lt;/p&gt;
+
+&lt;p&gt;Antes de começarmos, gostaria de agradecer pelos feedback que estou tendo a respeito do blog e pela “Saga WooCommerce”, OBRIGADO!!! Gostaria de &lt;strong&gt;ressaltar&lt;/strong&gt; que o feedback e opinão a respeito disso é importantíssimo, pois é com a opinião de vocês que iremos melhorar cada vez mais, pois este blog não é apenas meu, é de todos nós!!!&lt;/p&gt;
+
+&lt;p&gt;Se você ainda não opinou, possui uma dúvida ou quer apenas falar comigo, não se hesite em me contactar nas redes sociais e/ou no próprio comentário aqui do blog, irei responde-los com o maior prazer!&lt;/p&gt;
+
+&lt;p&gt;Enfim, chega de blablabla e vamos lá!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;LET’S GO GUYS!&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Na postagem anterior, &lt;a href=&quot;http://www.matheusloureiro.com.br/woocommerce-o-que-ha-por-tras-dele/&quot;&gt;O que há por trás do WooCommerce&lt;/a&gt; aprendemos como é a estrutura do WooCommerce (sim, se escreve desse jeito ‘-‘ (sim, eu não estava escrevendo assim (sim, irei escrever agora do jeito correto ‘-‘))) e já temos uma noção de como é o funcionamento do mesmo… Calma senhores, estamos pertinho de começar a &lt;strong&gt;DESENVOLVER UM TEMA ADAPTADO AO WOOCOMMERCE&lt;/strong&gt; (&lt;em&gt;olha aí rapaz ‘-‘&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Controle a euforia e aguarde mais um &lt;strong&gt;POUCO&lt;/strong&gt;!!! hahahaha, eu sou mal :3, mas tem um motivo… O motivo é que precisamos saber aonde mexer.&lt;/p&gt;
+
+&lt;p&gt;Como sabemos, o WooCommerce disponibiliza a sobrescrita dos arquivos, podemos muito bem ir lá e sobrescrever o template do jeito que queremos, né não? A resposta poderia ser sim… A não ser que, se você abrir os arquivos de template do WooCommerce, você perceberá que ele é um tanto diferente… Quer ver? Saca só!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/woocommerce-content-single.png&quot; alt=&quot;WooCommerce Content Single&quot; /&gt;
+&lt;small&gt;Errr… O que ser isso?&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Calma jovem!!! Não se assuste. Na imagem anterior, segue um pedaço de código do template &lt;em&gt;content-single-product.php&lt;/em&gt;, responsável por exibir a single do produto. Percebemos que existe diversos &lt;strong&gt;do_action&lt;/strong&gt;, responsável por chamar alguma função ligada ao &lt;strong&gt;hook&lt;/strong&gt;! Beleza, mas o que é hook?&lt;/p&gt;
+
+&lt;h2 id=&quot;hooks-do-woocommerce&quot;&gt;Hooks do WooCommerce&lt;/h2&gt;
+
+&lt;p&gt;O WooCommerce trabalha bastante com uma coisa chamada hook, ou se preferir, ganchos. Esses hooks permite que você manipule o código sem editar aquivos do core.&lt;/p&gt;
+
+&lt;p&gt;Dentro do Scaffold do WooCommerce existe um diretório chamado includes, e dentro dele possui um arquivo chamado &lt;strong&gt;wc-template-hooks.php&lt;/strong&gt;, lá esta declarado todos os hooks padrões do WooCommerce… Existe também um outro arquivo bastante útil no mesmo diretório - includes/ -, o &lt;strong&gt;wc-template-functions.php&lt;/strong&gt;, que trabalha em conjunto com os hooks.&lt;/p&gt;
+
+&lt;p&gt;Para verificarmos qual a função que o hook X está chamando, bastamos verificar qual o hook da determinada action e procurarmos a função correspondente do hook… Entendeu? Hum… Saca só!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Vamos supor que eu quero verificar qual a função está atribuida ao hook (woocommerce_before_single_product_summary) presente no arquivo &lt;strong&gt;content-single-product.php&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+    &lt;span class=&quot;sd&quot;&gt;/**&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;     * woocommerce_before_single_product_summary hook&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;     *&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;     * @hooked woocommerce_show_product_sale_flash - 10&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;     * @hooked woocommerce_show_product_images - 20&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;     */&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;do_action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;woocommerce_before_single_product_summary&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;x&quot;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/hook.png&quot; alt=&quot;Hook&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Saporra é essa? ‘-‘
+&lt;small&gt;&lt;small&gt;Sim jovem… São duas funções atribuídas a um hook! Hahahahahaha… Negócio é trilouco veei ‘-‘&lt;/small&gt;&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;Além disso existe uma “ordem” no hook, no nosso caso o hook &lt;strong&gt;(woocommerce_before_single_product_summary)&lt;/strong&gt; possui a ordem 10 e 20 respectivamente as funções woocommerce_show_product_sale_flash e woocommerce_show_product_images, que quando feito a chamada do hook, as ordens irá servir na exibição (10 aparecerá primeiro que 20 ‘-‘).&lt;/p&gt;
+
+&lt;p&gt;Basicamente… O WooCommerce é feito assim, através de hooks! Na próxima postagem iremos fazermos as nossas funções para os hooks… Aguarde!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Caso tenha alguma dúvida… Não se HESITE em falar, utilize o comentário abaixo ou me chame nas redes sociais!!!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fui!&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 17 Jan 2015 00:00:00 -0300</pubDate>
+      </item>
+    
+      <item>
+        <title>Woocommerce, o que há por trás dele?</title>
+        <link>http://www.matheusloureiro.com.br/woocommerce-o-que-ha-por-tras-dele</link>
+        <guid isPermaLink="true">http://www.matheusloureiro.com.br/woocommerce-o-que-ha-por-tras-dele</guid>
+        <description>&lt;p&gt;Olha eu novamente galera ‘-‘, antes de começar o post gostaria de agradecer a todos aqueles que deram seu feedback referente a primeira postagem, percebi que houve uma aceitação muito boa e eu gostaria agradecê-los por isso!
+&amp;gt; &lt;strong&gt;OBRIGADOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO&lt;/strong&gt;
+&amp;gt; &lt;strong&gt;PESSOALLLLLLLLLLLLLLLL VOCÊS SÃO F0D4S PRA C4R4LH0…&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;m&quot;&gt;01101111&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01100010&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01110010&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01101001&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01100111&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01100001&lt;/span&gt; 
+    &lt;span class=&quot;m&quot;&gt;01100100&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01101111&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;00100000&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01100101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01101101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;00100000&lt;/span&gt; 
+    &lt;span class=&quot;m&quot;&gt;01101101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01101111&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01100100&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01101111&lt;/span&gt; 
+    &lt;span class=&quot;m&quot;&gt;00100000&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01101110&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01100101&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01110010&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;01100100&lt;/span&gt; 00100001&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;entendedores entenderão &amp;#39;-&amp;#39;&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Então é isso… chega de agradecimento e vamos para o que interessa &lt;big&gt;##WOOCOMMERCE##&lt;big&gt;!&lt;/big&gt;&lt;/big&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;LET’S GO GUYS!&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Na postagem anterior, onde começamos o &lt;a href=&quot;http://www.matheusloureiro.com.br/getting-started-woocommerce/&quot;&gt;Getting Started Woocommerce&lt;/a&gt;, aprendemos o introdutório mesmo do que é o &lt;strong&gt;woocommerce&lt;/strong&gt; e como instalar no nosso wordpress, porém, foi algo muito simples, que tal nos aprofundarmos um pouco no assunto?&lt;/p&gt;
+
+&lt;p&gt;O Woocommerce traz consigo um layout já pronto, quando você acessa qualquer página que o woocommerce gerou, percebe-se de que há alguma coisa dentro delas. Você deve está se perguntando… Matheus, é só editar o CSS? Eu te respondo… Jovem, é uma alternativa, mas cá entre nós, nem eu nem você queremos ficar apenas nisso; Eu quero conseguir fazer o negócio do ‘0’ e você?&lt;/p&gt;
+
+&lt;p&gt;A estrutura do WooCommerce é assim oh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- woocommerce/
+    assets/
+    dummy-data/
+    i18n/
+    includes/
+    templates/
+    licence.txt
+    readme.txt
+    uninstall.php
+    woocommerce.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Obs: Esse Scaffold está dentro da pasta plugins/&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;PESSOALLLLLLLLL!!! Lembra que eu falei que o woocommerce vinha com um layout já pronto? Advinha onde está esse layout? ‘-‘ 
+Tá… vou falar, ele está dentro da pasta &lt;strong&gt;templates/&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- woocommerce/
+    templates/
+        cart/
+        checkout/
+        emails/
+        global/
+        loop/
+        myaccount/
+        notices/
+        order/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dentro da pasta templates, existe o layout padrão do woocommerce… &lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;cart/carty-empty.php &amp;gt; Ele é responsável pelo template que há no carrinho de compras quando está vazio (cart/ diretório onde há templates de carrinho);
+&lt;img src=&quot;/img/cart.png&quot; alt=&quot;Cart&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;checkout/form-checkout.php &amp;gt; Responsável pelo template do formulário de checkout (checkout/ diretório onde há templates de checkout);
+&lt;img src=&quot;/img/form-checkout.png&quot; alt=&quot;Checkout&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;global/breadcrumb.php &amp;gt; Responsável pelo template do breadcrumb (global/ refere-se ao diretório que contém templates comuns a várias áreas);&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;loop/add-to-cart.php &amp;gt; Responável pelo template do botão que adiciona ao carrinho (loop/ diretório onde há templates de loop);&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;myaccount/my-account.php &amp;gt; Responsável pelo template da minha conta (myaccount);
+&lt;img src=&quot;/img/account.png&quot; alt=&quot;Account&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;notices/ &amp;gt; Diretório onde há templates de notícias do woocommerce;
+&lt;img src=&quot;/img/notices.png&quot; alt=&quot;Notices&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;order/order-details.php &amp;gt; Responsável pelo template dos Meus Pedidos (order/ diretório onde há templates de pedidos).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bom… Agora sabemos o Scaffold do Woocommerce, mas calma, ainda não acabou! hahahahahaha (falei que esse post seria mais completo!)&lt;/p&gt;
+
+&lt;p&gt;Você deve está se perguntando… Matheus, agora eu já sei onde editar meu template, posso começar a editar? Eu te digo jovem, começar a editar, AI &lt;strong&gt;NÃO&lt;/strong&gt;! Mas porque? Imagine que o plugin sofre uma atualização e ele precisa atualizar os arquivos default do woocommerce, então, podemos perder todo o trabalho que tivemos… Pensando nisso, a galera do WooCommerce disponibilizou a sobrescrita desses arquivos.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sobrescrita do Woocommerce&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para sobrescrevermos esses arquivos, precisamos criar uma pasta chamada &lt;strong&gt;woocommerce&lt;/strong&gt; dentro do nosso tema do wordpress, em seguida, dizermos qual o arquivo iremos sobrescrever… Exemplo:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Eu quero sobrecrever o template cart/carty-empty.php responsável pelo carrinho vazio, como devo proceder ?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Jovem, dentro do seu tema do wordpress, você irá criar uma pasta chamada woocommerce, como dito anteriormente, porém o arquivo carty-empty.php está dentro da pasta cart/, logo, o que devemos fazer? Criar uma pasta chamada cart dentro da pasta woocommerce, ficando assim oh:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- wp-content
+    themes/
+        seu_tema/
+            woocommerce/
+                cart/
+                    carty-empty.php
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;E então só copiar o que está dentro de &lt;em&gt;plugins/woocommerce/cart/carty-empty.php&lt;/em&gt; para o seu arquivo carty-empty.php que está dentro do seu tema, e fazer as devidas alterações. Assim evitamos de que uma atualização nos traga uma dor de cabeça!&lt;/p&gt;
+
+&lt;p&gt;Por hoje é só… Agradeço a atenção e bons estudos!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 07 Jan 2015 00:00:00 -0300</pubDate>
+      </item>
+    
+      <item>
+        <title>Getting Started Woocommerce!</title>
+        <link>http://www.matheusloureiro.com.br/getting-started-woocommerce</link>
+        <guid isPermaLink="true">http://www.matheusloureiro.com.br/getting-started-woocommerce</guid>
+        <description>&lt;p&gt;Eae pessoooooooal… Tranquilo? Gostaria de inaugurar meu blog com um post diferenciado, por ser o primeiro post e também por ser uma nova experiência que estarei tendo… Sim, iremos aprender &lt;a href=&quot;http://www.woothemes.com/woocommerce/&quot;&gt;WooCommerce&lt;/a&gt; juntos!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong class=&quot;tituloGrande&quot;&gt;Preparados?&lt;/strong&gt;
+PREPARA! Que agora é hora, do show das… 
+Não, pera ‘-‘&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Antes de começarmos… precisamos saber o que é o “treco” né?
+## O que é woocommerce?
+&lt;img src=&quot;/img/woocommerce.png&quot; alt=&quot;WooCommerce&quot; /&gt;
+Trata-se de um plugin que adiciona a funcionalidade de &lt;strong&gt;Ecommerce&lt;/strong&gt; no seu wordpress e que vêm crescendo cada vez mais, muitos usuários estão migrando para o woocommerce devido o fácil manuseio, grande acervo de plugins e uma comunidade bastante ativa.&lt;/p&gt;
+
+&lt;p&gt;Para os desenvolvedores que criam temas para o wordpress, torna-se fácil a criação(ou adaptação) de(o) tema para woocommerce, assim, temos um grande poder nas nossas mãos pois estamos desenvolvendo uma plataforma de ecommerce em um lugar onde tudo é muito interativo.&lt;/p&gt;
+
+&lt;p&gt;Cujo dados do &lt;a href=&quot;https://wappalyzer.com/categories/ecommerce&quot;&gt;WappAnalyser&lt;/a&gt;, percebe-se que o uso do WooCommerce está em 18% dos sites analisados e ocupando a segunda posição, o que leva a crer que é um número bastante razoavel, perdendo apenas para o Prestashop (primeiro lugar).&lt;/p&gt;
+
+&lt;p&gt;Mas chega de bla bla bla e vamos colocar as mãos na massa… 
+&amp;gt;&lt;strong&gt;LET’S GO GUYS!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Devemos efetuar o download do plugin e instalar no nosso wordpress, ok Matheus… Comofaz? ‘-‘ Simples! Clique &lt;a href=&quot;http://downloads.wordpress.org/plugin/woocommerce.zip&quot;&gt;neste link&lt;/a&gt; que você já irá fazer o download da ultima versão do woocommerce e basta importar o tema para o seu wordpress. Siga esses Passos, Painel do Wordpress &amp;gt; Plugin &amp;gt; Adicionar Novo &amp;gt; Fazer Upload do plugin. &lt;em&gt;sou muito bom né?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Temos uma segunda forma também de instalar nosso woocommerce também, através do próprio Wordpress ‘-‘, Matheus!!!!! Comofaz? Simples Jovem! Vá no Painel do Wordpress &amp;gt; Plugins &amp;gt; Adicionar Novo, pesquise por &lt;strong&gt;woocommerce&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Parabéns!!! Você instalou o Woocommerce!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;E agora? Aguarde… Na próxima postagem irei demonstrar mais a parte conceitual do WooCommerce. Aguarde! ‘-‘&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 06 Jan 2015 00:00:00 -0300</pubDate>
+      </item>
+    
   </channel>
 </rss>
