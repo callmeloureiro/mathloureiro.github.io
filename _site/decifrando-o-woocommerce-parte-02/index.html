@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>Decifrando o WooCommerce Parte 02 | Blog do Loureiro</title>
+	<meta name="description" content="Senhoras e senhores… Depois de um tempo sem postar, estamos novamente continuando o show! Estava realmente sem tempo e gostaria de agradece-los pela cobrança...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-02">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Blog do Loureiro" href="http://www.matheusloureiro.com.br/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  <!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<a href="/">
+			<img class="avatar" src="/img/avatar.png" alt=""/>
+		</a>
+		
+		<h1 class="site-title">
+			<a href="/">Blog do Loureiro</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<!-- Social icons from Font Awesome, if enabled -->
+			
+<li>
+	<a href="http://www.matheusloureiro.com.br/feed.xml" title="Follow RSS feed">
+		<i class="fa fa-fw fa-rss"></i>
+	</a>
+</li>
+
+
+
+<li>
+	<a href="mailto:web@matheusloureiro.com.br" title="Email">
+		<i class="fa fa-fw fa-envelope"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://www.facebook.com/mathloureiro" title="Follow on Facebook">
+		<i class="fa fa-fw fa-facebook"></i>
+	</a>
+</li>
+
+
+
+
+
+<li>
+	<a href="https://github.com/mathloureiro" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+    <div class="content">
+      <article >
+  <header style="background-image: url('/')">
+    <h1 class="title">Decifrando o WooCommerce Parte 02</h1>
+    <p class="meta">
+    February 11, 2015
+    
+    </p>
+  </header>
+  <section class="post-content"><p>Senhoras e senhores… Depois de um tempo sem postar, estamos novamente continuando o show! Estava realmente sem tempo e gostaria de agradece-los pela cobrança que tive para fazer uma nova matéria :), isso foi fantástico!</p>
+
+<p>Continuando o show… Vamos prosseguir a postagem anterior, caso você não tenha visto ainda, <a href="http://www.matheusloureiro.com.br/decifrando-o-woocommerce-parte-01/">Clique aqui</a> e sinta o poder que você já poderá conseguir fazer :).</p>
+
+<blockquote>
+  <p><strong>LET’S GO GUYS!</strong></p>
+</blockquote>
+
+<p>Já sabemos como o WooCommerce funciona, então vamos listar agora o que já vimos aqui…
+* Scaffold do WooCommerce
+* Sobreposição dos arquivos templates do WooCommerce
+* Funcionamento de um hook</p>
+
+<p><small>Caso você tenha perdido alguma dessas matérias, <a href="http://www.matheusloureiro.com.br/categorias/woocommerce/">entre aqui</a> e veja todo o material relacionado a WooCommerce.</small></p>
+
+<p>Então… Estamos próximos a começar a desenvolver de fato, mas antes, irei listar algumas coisas que costumo utilizar e porque deles existirem no meu projeto.</p>
+
+<ul>
+  <li><a href="http://foundation.zurb.com">Foundation</a>
+    <ul>
+      <li>Framework CSS, foudation tornou-se uma mão na roda no desenvolvimento, ajudando na agilidade do meu projeto como também na qualidade dele. Normalmente vocês devem utilizar o <a href="http://getbootstrap.com/">Bootstrap</a>, mas eu particulamente não gosto, achei o foundation bem mais inteligente do que o Bootstrap principalmente quando usado algum <strong>Pré-processador</strong>…</li>
+    </ul>
+  </li>
+  <li><a href="http://sass-lang.com">SASS</a>
+    <ul>
+      <li>Sass pré-processador, antes de escolher qual pre processador utilizar, testei um por um e me simpatizei muito com o sass… E quando percebo, lá na doc do <strong>FOUNDATION</strong> percebemos também que eles utilizam o sass ‘-‘, isso foi muito da hora! <a href="http://lesscss.org">LESS</a> também é muito da hora, mas… Confiram essa tabela e tirem suas conclusões: <a href="http://www.hongkiat.com/blog/sass-vs-less/">Sass x Less</a></li>
+    </ul>
+  </li>
+  <li><a href="http://gulpjs.com">Gulp</a>
+    <ul>
+      <li>Gulp automatizador, com o mesmo propópsito do <a href="http://gruntjs.com">Grunt</a>, o Gulp veio para agilizar mais ainda o trabalho que o Grunt fazia, sendo o Gulp mais rápido na execução de tarefas… Diferentemente do Grunt, você escreve tarefas do Gulp em JavaScript(algo parecido com o nodeJS) e não em JSON usado no Grunt. O diferencial realmente está no quesito de velocidade que no resultado final dá uma grande diferença.</li>
+    </ul>
+  </li>
+  <li><a href="http://roots.io/">Roots.io</a>
+    <ul>
+      <li>Roots starter theme wordpress, para quem não conhece o Roots, ele é um starter theme para wordpress, ou seja, um tema já pronto para você começar a desenvolver. Ele é um projeto muito show, tem alguns diferenciais bacanas como o Wrapper. Pra galera que conhece o Laravel, o wrapper funciona como o @extends, onde há uma base e você irá escrever apenas entre o body, preservando assim o header e o footer sem a necessidade de ficar dando include :). Porém ele default tras consigo o bootstrap e grunt, maaaas, como eu não curto tanto eles, então tive a necessidade de criar um a meu gosto né? ‘-‘, Apresento-lhes o <a href="https://github.com/mathloureiro/Loume">LOUME</a>, baseado no <a href="https://github.com/cicerohen/gromf">GROMF</a>, um tema baseado no Roots.io porém utilizando gulp, foundation e sass ‘-‘, da hora né?</li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Então é isso, agora vamos colocar mão na massa!</p>
+</blockquote>
+
+<p>O que basicamente precisamos saber nós já sabemos então não há nada que nós impeça de desenvolver um tema agora de fato, então na sua function.php iremos começar a brincar ‘-‘.</p>
+
+<p>Como falado ao decorrer dessa série, os hooks são responsáveis por atribuir a função no seu projeto, logo leva a crer que além do hook existe uma função atrelada e ele. Há três formas de manipularmos os hooks</p>
+
+<ul>
+  <li>Adicionando add_action();</li>
+  <li>Removendo remove_action();</li>
+  <li>Filtrando add_filter();</li>
+</ul>
+
+<p>add_action, usado para adicionar uma função a um hook. <br />
+remove_action, usado para remover uma função de um hook. <br />
+add_filter, usado para sobrescrever certas funções. <br /></p>
+
+<p>Vamos supor que eu quero remover a sidebar do WooCommeerce, então já sabemos o que utilizar… Concordam comigo que é a remove_action()?</p>
+
+<p>Ok, é ela ‘-‘.</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">add_action( &#39;woocommerce_sidebar&#39;, &#39;woocommerce_get_sidebar&#39;, 10)</span></code></pre></div>
+
+<p>Esse é o hook responsável por chamar a sidebar no nosso site… Se lermos ele um pouco, veremos que existe uma função chamada woocommerce_get_sidebar, com o nome do hook denominado por woocommerce_sidebar e que tem a posição ou ordem 10. Bastamos trocar o add_action por remove_action, ficando assim:</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">remove_action( &#39;woocommerce_sidebar&#39;, &#39;woocommerce_get_sidebar&#39;, 10).</span></code></pre></div>
+
+<p>Beleza, conseguimos remover a sidebar :).</p>
+
+<p>Vamos supor que eu quero adicionar uma sidebar criada por mim no lugar da sidebar original do WooCommerce.</p>
+
+<p>Então, depois de removida, temos esse espaço do hook disponível para colocarmos o que quisermos, então bastamos escrever isso aqui:</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">add_action( &#39;woocommerce_sidebar&#39;, &#39;SUA_FUNCAO&#39;, 10);</span></code></pre></div>
+
+<p>Será substituida pela a sua função :).</p>
+
+<p>Para finalizar, vamos supor que eu quero mudar o nome que aparece na tab descrição do produto… Quero colocar o nome do produto como título.</p>
+
+<p>Como já existe uma função responsável pra isso, então podemos sobrescreve-la pela nossa… Ficando assim:</p>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">add_filter( &#39;woocommerce_product_tabs&#39;, &#39;loureiro_mudaNome_titulo_tabs&#39;, 10, 1 );</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="x">function loureiro_mudaNome_titulo_tabs( $tabs ) {</span>
+<span class="x">    global $post;</span>
+<span class="x">    if ( isset( $tabs[&#39;description&#39;][&#39;title&#39;] ) )</span>
+<span class="x">      $tabs[&#39;description&#39;][&#39;title&#39;] = $post-&gt;post_title;</span>
+<span class="x">    return $tabs;</span>
+<span class="x">  }</span></code></pre></div>
+
+<p>Voy lá! Conseguimos mudar o nome da tab :).</p>
+
+<p>Então por hoje é só galera! Espero que tenham gostado, até a próxima!</p>
+</section>
+  <section class="info">
+    <h3>Matheus Loureiro</h3>
+    <p> Sou frontend e backend - amante de tudo que for bom :), cursando Ciência da computação porém focado em Web. Gosto de usar meu tempo estudando novidades tecnológicas e aos tempos vagos, postar coisas aqui no blog. </p>
+  </section>
+</article>
+
+<!-- Disqus -->
+
+
+<div class="comments">
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+	var disqus_shortname = 'blogdoloureiro';
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a>
+</p>
+</footer>
+
+
+  </body>
+</html>

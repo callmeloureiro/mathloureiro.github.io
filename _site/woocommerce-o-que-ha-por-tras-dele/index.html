@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+	<meta charset="utf-8">
+	<title>Woocommerce, o que há por trás dele? | Blog do Loureiro</title>
+	<meta name="description" content="Olha eu novamente galera ‘-‘, antes de começar o post gostaria de agradecer a todos aqueles que deram seu feedback referente a primeira postagem, percebi que...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-Frame-Options" content="sameorigin">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/main.css">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="http://www.matheusloureiro.com.br/woocommerce-o-que-ha-por-tras-dele">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/atom+xml" title="Blog do Loureiro" href="http://www.matheusloureiro.com.br/feed.xml" />
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  <!-- KaTeX -->
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+	
+
+	<!-- Google Analytics -->
+	
+</head>
+
+  <body>
+    <header class="site-header">
+	<div class="branding">
+		
+		<a href="/">
+			<img class="avatar" src="/img/avatar.png" alt=""/>
+		</a>
+		
+		<h1 class="site-title">
+			<a href="/">Blog do Loureiro</a>
+		</h1>
+	</div>
+	<nav class="site-nav">
+		<ul>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<!-- Social icons from Font Awesome, if enabled -->
+			
+<li>
+	<a href="http://www.matheusloureiro.com.br/feed.xml" title="Follow RSS feed">
+		<i class="fa fa-fw fa-rss"></i>
+	</a>
+</li>
+
+
+
+<li>
+	<a href="mailto:web@matheusloureiro.com.br" title="Email">
+		<i class="fa fa-fw fa-envelope"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://www.facebook.com/mathloureiro" title="Follow on Facebook">
+		<i class="fa fa-fw fa-facebook"></i>
+	</a>
+</li>
+
+
+
+
+
+<li>
+	<a href="https://github.com/mathloureiro" title="Follow on GitHub">
+		<i class="fa fa-fw fa-github"></i>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</ul>
+	</nav>
+</header>
+
+    <div class="content">
+      <article >
+  <header style="background-image: url('/')">
+    <h1 class="title">Woocommerce, o que há por trás dele?</h1>
+    <p class="meta">
+    January 7, 2015
+    
+    </p>
+  </header>
+  <section class="post-content"><p>Olha eu novamente galera ‘-‘, antes de começar o post gostaria de agradecer a todos aqueles que deram seu feedback referente a primeira postagem, percebi que houve uma aceitação muito boa e eu gostaria agradecê-los por isso!
+&gt; <strong>OBRIGADOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</strong>
+&gt; <strong>PESSOALLLLLLLLLLLLLLLL VOCÊS SÃO F0D4S PRA C4R4LH0…</strong></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="m">01101111</span> <span class="m">01100010</span> <span class="m">01110010</span> <span class="m">01101001</span> <span class="m">01100111</span> <span class="m">01100001</span> 
+    <span class="m">01100100</span> <span class="m">01101111</span> <span class="m">00100000</span> <span class="m">01100101</span> <span class="m">01101101</span> <span class="m">00100000</span> 
+    <span class="m">01101101</span> <span class="m">01101111</span> <span class="m">01100100</span> <span class="m">01101111</span> 
+    <span class="m">00100000</span> <span class="m">01101110</span> <span class="m">01100101</span> <span class="m">01110010</span> <span class="m">01100100</span> 00100001</code></pre></div>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;entendedores entenderão &#39;-&#39;&quot;</span></code></pre></div>
+
+<p>Então é isso… chega de agradecimento e vamos para o que interessa <big>##WOOCOMMERCE##<big>!</big></big></p>
+
+<blockquote>
+  <p><strong>LET’S GO GUYS!</strong></p>
+</blockquote>
+
+<p>Na postagem anterior, onde começamos o <a href="http://www.matheusloureiro.com.br/getting-started-woocommerce/">Getting Started Woocommerce</a>, aprendemos o introdutório mesmo do que é o <strong>woocommerce</strong> e como instalar no nosso wordpress, porém, foi algo muito simples, que tal nos aprofundarmos um pouco no assunto?</p>
+
+<p>O Woocommerce traz consigo um layout já pronto, quando você acessa qualquer página que o woocommerce gerou, percebe-se de que há alguma coisa dentro delas. Você deve está se perguntando… Matheus, é só editar o CSS? Eu te respondo… Jovem, é uma alternativa, mas cá entre nós, nem eu nem você queremos ficar apenas nisso; Eu quero conseguir fazer o negócio do ‘0’ e você?</p>
+
+<p>A estrutura do WooCommerce é assim oh:</p>
+
+<pre><code>- woocommerce/
+    assets/
+    dummy-data/
+    i18n/
+    includes/
+    templates/
+    licence.txt
+    readme.txt
+    uninstall.php
+    woocommerce.php
+</code></pre>
+
+<p><em>Obs: Esse Scaffold está dentro da pasta plugins/</em></p>
+
+<p>PESSOALLLLLLLLL!!! Lembra que eu falei que o woocommerce vinha com um layout já pronto? Advinha onde está esse layout? ‘-‘ 
+Tá… vou falar, ele está dentro da pasta <strong>templates/</strong></p>
+
+<pre><code>- woocommerce/
+    templates/
+        cart/
+        checkout/
+        emails/
+        global/
+        loop/
+        myaccount/
+        notices/
+        order/
+</code></pre>
+
+<p>Dentro da pasta templates, existe o layout padrão do woocommerce… <br /></p>
+
+<ul>
+  <li>
+    <p>cart/carty-empty.php &gt; Ele é responsável pelo template que há no carrinho de compras quando está vazio (cart/ diretório onde há templates de carrinho);
+<img src="/img/cart.png" alt="Cart" /></p>
+  </li>
+  <li>
+    <p>checkout/form-checkout.php &gt; Responsável pelo template do formulário de checkout (checkout/ diretório onde há templates de checkout);
+<img src="/img/form-checkout.png" alt="Checkout" /></p>
+  </li>
+  <li>
+    <p>global/breadcrumb.php &gt; Responsável pelo template do breadcrumb (global/ refere-se ao diretório que contém templates comuns a várias áreas);</p>
+  </li>
+  <li>
+    <p>loop/add-to-cart.php &gt; Responável pelo template do botão que adiciona ao carrinho (loop/ diretório onde há templates de loop);</p>
+  </li>
+  <li>
+    <p>myaccount/my-account.php &gt; Responsável pelo template da minha conta (myaccount);
+<img src="/img/account.png" alt="Account" /></p>
+  </li>
+  <li>
+    <p>notices/ &gt; Diretório onde há templates de notícias do woocommerce;
+<img src="/img/notices.png" alt="Notices" /></p>
+  </li>
+  <li>
+    <p>order/order-details.php &gt; Responsável pelo template dos Meus Pedidos (order/ diretório onde há templates de pedidos).</p>
+  </li>
+</ul>
+
+<p>Bom… Agora sabemos o Scaffold do Woocommerce, mas calma, ainda não acabou! hahahahahaha (falei que esse post seria mais completo!)</p>
+
+<p>Você deve está se perguntando… Matheus, agora eu já sei onde editar meu template, posso começar a editar? Eu te digo jovem, começar a editar, AI <strong>NÃO</strong>! Mas porque? Imagine que o plugin sofre uma atualização e ele precisa atualizar os arquivos default do woocommerce, então, podemos perder todo o trabalho que tivemos… Pensando nisso, a galera do WooCommerce disponibilizou a sobrescrita desses arquivos.</p>
+
+<blockquote>
+  <p>Sobrescrita do Woocommerce</p>
+</blockquote>
+
+<p>Para sobrescrevermos esses arquivos, precisamos criar uma pasta chamada <strong>woocommerce</strong> dentro do nosso tema do wordpress, em seguida, dizermos qual o arquivo iremos sobrescrever… Exemplo:</p>
+
+<p><strong>Eu quero sobrecrever o template cart/carty-empty.php responsável pelo carrinho vazio, como devo proceder ?</strong></p>
+
+<p>Jovem, dentro do seu tema do wordpress, você irá criar uma pasta chamada woocommerce, como dito anteriormente, porém o arquivo carty-empty.php está dentro da pasta cart/, logo, o que devemos fazer? Criar uma pasta chamada cart dentro da pasta woocommerce, ficando assim oh:</p>
+
+<pre><code>- wp-content
+    themes/
+        seu_tema/
+            woocommerce/
+                cart/
+                    carty-empty.php
+</code></pre>
+
+<p>E então só copiar o que está dentro de <em>plugins/woocommerce/cart/carty-empty.php</em> para o seu arquivo carty-empty.php que está dentro do seu tema, e fazer as devidas alterações. Assim evitamos de que uma atualização nos traga uma dor de cabeça!</p>
+
+<p>Por hoje é só… Agradeço a atenção e bons estudos!</p>
+
+</section>
+  <section class="info">
+    <h3>Matheus Loureiro</h3>
+    <p> Sou frontend e backend - amante de tudo que for bom :), cursando Ciência da computação porém focado em Web. Gosto de usar meu tempo estudando novidades tecnológicas e aos tempos vagos, postar coisas aqui no blog. </p>
+  </section>
+</article>
+
+<!-- Disqus -->
+
+
+<div class="comments">
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+	var disqus_shortname = 'blogdoloureiro';
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</div>
+
+
+    </div>
+    <script src="/js/main.js"></script>
+
+
+<footer class="site-footer">
+	<p class="text">Powered by <a href="http://jekyllrb.com">Jekyll</a>
+</p>
+</footer>
+
+
+  </body>
+</html>
